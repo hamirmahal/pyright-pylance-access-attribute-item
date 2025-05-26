@@ -1,0 +1,15 @@
+[project]
+name = "python-project-template"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["pyright>=1.1.401"]
+
+[tool.ruff.lint]
+select = ["ALL"]
+ignore = [
+    "D203",   # Conflicts with D211 (no blank line before class)
+    "D213",   # Conflicts with D212 (multi-line summary on second line)
+    "COM812", # Conflicts with Ruff formatter
+    "PT009",  # I don't want to install an external test dependency.
+]
